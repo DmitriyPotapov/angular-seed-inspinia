@@ -53,7 +53,7 @@ export class SeedConfig {
   
 
    FONT_AWESOME_SRC     = 'node_modules/font-awesome/';
-   BOOTSTRAP_SRC        = 'node_modules/bootstrap'
+   BOOTSTRAP_SRC        = 'node_modules/bootstrap/dist/'
   /**
    * The root folder of the project (up two levels from the current directory).
    */
@@ -255,7 +255,7 @@ export class SeedConfig {
    * @type {strings}
    */
   CSS_DEST = `${this.APP_DEST}/css`;
-
+  FONTS_DEST = `${this.APP_DEST}`;
   /**
    * The folder for the built JavaScript files.
    * @type {string}

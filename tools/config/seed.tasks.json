@@ -8,9 +8,9 @@
     "clean.once",
     "build.assets.dev",
     "build.html_css",
+    "build.fonts",
     "build.js.dev",
-    "build.index.dev",
-    "build.fonts"
+    "build.index.dev"
   ],
 
   "build.dev.watch": [
@@ -32,6 +32,7 @@
     "tslint",
     "build.assets.prod",
     "build.html_css",
+    "build.fonts",
     "copy.prod",
     "build.js.prod",
     "build.bundles",
