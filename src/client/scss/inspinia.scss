@@ -621,7 +621,10 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
   }
 }
 .btn {
-  border-radius: 3px;
+  border-radius: 0;
+}
+.flat {
+  border-radius: 0;
 }
 .float-e-margins .btn {
   margin-bottom: 5px;

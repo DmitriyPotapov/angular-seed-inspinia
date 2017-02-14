@@ -11,6 +11,7 @@
   <link rel="icon" href="<%= APP_BASE %>assets/favicon/favicon.ico" type="image/x-icon">
   <!-- inject:css -->
   <!-- endinject -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body class="md-skin">
 
@@ -43,11 +44,13 @@
 
   <% if (BUILD_TYPE === 'dev') { %>
   <script>
+
+
   System.import('<%= BOOTSTRAP_MODULE %>').catch(function (e) {
       console.error(e.stack || e);
     });
   </script>
   <% } %>
-
+ 
 </body>
 </html>

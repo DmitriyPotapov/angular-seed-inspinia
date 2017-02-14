@@ -5,7 +5,6 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import {RouterModule} from "@angular/router";
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-
 import {ROUTES} from "./app.routes";
 import { AppComponent } from './app.component';
 //import { AppRoutingModule } from './app-routing.module';
