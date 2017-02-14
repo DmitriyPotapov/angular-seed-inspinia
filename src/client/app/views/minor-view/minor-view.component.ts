@@ -5,4 +5,4 @@ import { Component } from '@angular/core';
     selector: 'minorView',
     templateUrl: 'minor-view.template.html'
 })
-export class minorViewComponent { }
+export class minorViewComponent {}
