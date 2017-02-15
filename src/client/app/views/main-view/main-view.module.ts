@@ -1,10 +1,10 @@
-import {NgModule} from "@angular/core";
-import {BrowserModule} from "@angular/platform-browser";
-import {mainViewComponent} from "./main-view.component";
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { mainViewComponent } from "./main-view.component";
 
 @NgModule({
     declarations: [mainViewComponent],
-    imports     : [BrowserModule],
+    imports: [BrowserModule],
 })
 
-export class MainViewModule {}
+export class MainViewModule { }
