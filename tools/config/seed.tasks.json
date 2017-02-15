@@ -48,6 +48,7 @@
     "tslint",
     "build.assets.prod",
     "build.html_css",
+    "build.fonts",
     "copy.prod",
     "compile.ahead.prod",
     "build.js.prod.aot",
@@ -64,6 +65,7 @@
     "tslint",
     "build.assets.prod",
     "build.html_css",
+    "build.fonts",
     "copy.prod.rollup.aot",
     "compile.ahead.prod",
     "build.js.prod.rollup.aot",
@@ -79,6 +81,7 @@
     "clean.dev",
     "build.assets.dev",
     "build.html_css",
+    "build.fonts",
     "build.js.dev",
     "build.js.test",
     "build.index.dev"

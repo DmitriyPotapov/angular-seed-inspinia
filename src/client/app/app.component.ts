@@ -3,7 +3,7 @@ import { Config } from './shared/config/env.config';
 import { correctHeight, detectBody } from './app.helpers';
 import './operators';
 
-declare var jQuery:any;
+declare var jQuery: any;
 /**
  * This class represents the main application component.
  */
@@ -17,7 +17,7 @@ export class AppComponent {
     console.log('Environment config', Config);
   }
 
-   ngAfterViewInit() {
+  ngAfterViewInit() {
     // Run correctHeight function on load and resize window event
     jQuery(window).bind("load resize", function() {
       correctHeight();
@@ -28,7 +28,7 @@ export class AppComponent {
     jQuery('.metismenu a').click(() => {
       setTimeout(() => {
         correctHeight();
-      }, 300)
+      }, 300);
     });
   }
 }
