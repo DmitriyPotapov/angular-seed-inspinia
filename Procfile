@@ -1,0 +1,1 @@
+web: gulp serve.prod.aot --color --env-config prod --build-type prod
