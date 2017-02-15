@@ -27,6 +27,7 @@
     "lint": "gulp tslint",
     "karma": "karma",
     "karma.start": "karma start",
+    "preinstall": "npm install gulp-util",
     "postinstall": "gulp check.versions && gulp build.bundle.rxjs && npm prune && gulp webdriver && gulp print.banner",
     "reinstall": "npm cache clean && npm install",
     "serve.coverage": "gulp serve.coverage --color",
@@ -45,8 +46,7 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update",
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
-    "serve.compodoc": "node_modules/.bin/compodoc -s",
-    "heroku-prebuild": "heroku config:set NPM_CONFIG_PRODUCTION=false"
+    "serve.compodoc": "node_modules/.bin/compodoc -s"
   },
   "author": "Minko Gechev <mgechev>",
   "license": "MIT",
