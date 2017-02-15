@@ -45,7 +45,8 @@
     "webdriver-start": "webdriver-manager start",
     "webdriver-update": "webdriver-manager update",
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
-    "serve.compodoc": "node_modules/.bin/compodoc -s"
+    "serve.compodoc": "node_modules/.bin/compodoc -s",
+    "heroku-prebuild": "heroku config:set NPM_CONFIG_PRODUCTION=false"
   },
   "author": "Minko Gechev <mgechev>",
   "license": "MIT",
@@ -102,6 +103,7 @@
     "gulp-typescript": "^3.0.2",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.11",
+     "gulp-util": "^3.0.7",
     "is-ci": "^1.0.9",
     "isstream": "^0.1.2",
     "jasmine-core": "~2.5.2",
@@ -158,7 +160,6 @@
     "rxjs": "~5.0.3",
     "systemjs": "0.19.41",
     "tether": "^1.4.0",
-    "zone.js": "^0.7.2",
-    "gulp-util": "^3.0.7"
-  }
+    "zone.js": "^0.7.2"
+   }
 }
