@@ -1,9 +1,13 @@
 {
   "name": "angular-seed",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
   "repository": {
     "url": "https://github.com/mgechev/angular-seed"
+  },
+  "engines": {
+    "node": ">=7.5.0",
+    "npm": ">=4.1.2"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
