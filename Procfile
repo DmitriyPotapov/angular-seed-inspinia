@@ -1,1 +1,1 @@
-web: gulp serve.prod.aot --color --env-config prod --build-type prod
+web: gulp serve.prod --port 80 --color --env-config prod --build-type prod
