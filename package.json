@@ -46,7 +46,7 @@
     "webdriver-update": "webdriver-manager update",
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s",
-    "heroku-prebuild": "heroku config:set NPM_CONFIG_PRODUCTION=false"
+    "heroku-prebuild": "node -v"
   },
   "author": "Minko Gechev <mgechev>",
   "license": "MIT",
