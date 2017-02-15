@@ -11,10 +11,10 @@ export const FONT_AWESOME_SRC     = 'node_modules/font-awesome/';
 export class ProjectConfig extends SeedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
- 
+
   constructor() {
     super();
-    
+
     // this.APP_TITLE = 'Put name of your app here';
 
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
@@ -44,11 +44,11 @@ export class ProjectConfig extends SeedConfig {
  // *towards the bottom, replace extended packages with this:
 
   let additionalPackages: ExtendPackages[] = [
-  // required for dev build 
+  // required for dev build
   {
     name:'ng2-bootstrap',
     path:'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.min.js'
-  },    
+  },
 
   // required for prod build
   {
@@ -56,7 +56,7 @@ export class ProjectConfig extends SeedConfig {
     path:'node_modules/ng2-bootstrap/bundles/ng2-bootstrap.umd.min.js'
   },
 
-  // mandatory dependency for ng2-bootstrap datepicker 
+  // mandatory dependency for ng2-bootstrap datepicker
   {
     name:'moment',
     path:'node_modules/moment',
@@ -65,7 +65,7 @@ export class ProjectConfig extends SeedConfig {
       defaultExtension: 'js'
     }
   }
-  ];    
+  ];
   this.addPackagesBundles(additionalPackages);
     // Add packages (e.g. ng2-translate)
     // let additionalPackages: ExtendPackages[] = [{

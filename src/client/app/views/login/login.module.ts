@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { loginComponent } from './login.component';
+import { LoginComponent } from './login.component';
 
 @NgModule({
-    declarations: [loginComponent],
+    declarations: [LoginComponent],
     imports: [BrowserModule],
 })
 

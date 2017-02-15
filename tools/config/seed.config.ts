@@ -50,10 +50,10 @@ export class SeedConfig {
    * @type {number}
    */
   PORT = argv['port'] || 5555;
-  
+
 
    FONT_AWESOME_SRC     = 'node_modules/font-awesome/';
-   BOOTSTRAP_SRC        = 'node_modules/bootstrap/dist/'
+   BOOTSTRAP_SRC        = 'node_modules/bootstrap/dist/';
   /**
    * The root folder of the project (up two levels from the current directory).
    */

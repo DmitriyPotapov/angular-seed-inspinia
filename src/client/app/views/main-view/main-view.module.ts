@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { mainViewComponent } from './main-view.component';
+import { MainViewComponent } from './main-view.component';
 
 @NgModule({
-    declarations: [mainViewComponent],
+    declarations: [MainViewComponent],
     imports: [BrowserModule],
 })
 

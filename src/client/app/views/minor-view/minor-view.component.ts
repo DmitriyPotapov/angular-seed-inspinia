@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'minorView',
+    selector: 'minor-view-selector',
     templateUrl: 'minor-view.template.html'
 })
-export class minorViewComponent { }
+export class MinorViewComponent { }

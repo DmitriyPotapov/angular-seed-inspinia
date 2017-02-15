@@ -4,7 +4,7 @@ declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
-    selector: 'topnavbar',
+    selector: 'topnavbar-selector',
     templateUrl: 'topnavbar.template.html'
 })
 export class TopnavbarComponent {

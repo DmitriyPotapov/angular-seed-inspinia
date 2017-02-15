@@ -4,10 +4,10 @@ declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
-    selector: 'blank',
+    selector: 'blank-selector',
     templateUrl: 'blank.template.html'
 })
-export class blankComponent implements AfterViewInit, OnDestroy {
+export class BlankComponent implements AfterViewInit, OnDestroy {
 
     ngAfterViewInit() {
         jQuery('body').addClass('gray-bg');

@@ -5,7 +5,7 @@ declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
-    selector: 'navigation',
+    selector: 'navigation-selector',
     templateUrl: 'navigation.template.html'
 })
 

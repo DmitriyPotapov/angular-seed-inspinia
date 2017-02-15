@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     moduleId: module.id,
-    selector: 'mianView',
+    selector: 'mian-view-selector',
     templateUrl: 'main-view.template.html'
 })
-export class mainViewComponent { }
+export class MainViewComponent { }
