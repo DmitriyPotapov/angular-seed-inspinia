@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import { Component, AfterViewInit } from '@angular/core';
+import { Router } from '@angular/router';
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
@@ -9,17 +9,15 @@ declare var jQuery:any;
     templateUrl: 'navigation.template.html'
 })
 
-export class NavigationComponent {
+export class NavigationComponent implements AfterViewInit {
 
-    constructor(private router: Router) {}
+    constructor(private router: Router) { }
 
     ngAfterViewInit() {
         jQuery('#side-menu').metisMenu();
     }
 
-    activeRoute(routename: string): boolean{
+    activeRoute(routename: string): boolean {
         return this.router.url.indexOf(routename) > -1;
     }
-
-
 }

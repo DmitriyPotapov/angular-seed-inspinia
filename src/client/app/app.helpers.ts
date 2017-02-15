@@ -7,7 +7,7 @@
  *
  */
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 export function correctHeight() {
 
@@ -16,31 +16,31 @@ export function correctHeight() {
   var wrapperHeigh = pageWrapper.height();
 
   if (navbarHeight > wrapperHeigh) {
-    pageWrapper.css("min-height", navbarHeight + "px");
+    pageWrapper.css('min-height', navbarHeight + 'px');
   }
 
   if (navbarHeight < wrapperHeigh) {
     if (navbarHeight < jQuery(window).height()) {
-      pageWrapper.css("min-height", jQuery(window).height() + "px");
+      pageWrapper.css('min-height', jQuery(window).height() + 'px');
     } else {
-      pageWrapper.css("min-height", navbarHeight + "px");
+      pageWrapper.css('min-height', navbarHeight + 'px');
     }
   }
 
   if (jQuery('body').hasClass('fixed-nav')) {
     if (navbarHeight > wrapperHeigh) {
-      pageWrapper.css("min-height", navbarHeight + "px");
+      pageWrapper.css('min-height', navbarHeight + 'px');
     } else {
-      pageWrapper.css("min-height", jQuery(window).height() - 60 + "px");
+      pageWrapper.css('min-height', jQuery(window).height() - 60 + 'px');
     }
   }
 }
 
 export function detectBody() {
   if (jQuery(document).width() < 769) {
-    jQuery('body').addClass('body-small')
+    jQuery('body').addClass('body-small');
   } else {
-    jQuery('body').removeClass('body-small')
+    jQuery('body').removeClass('body-small');
   }
 }
 

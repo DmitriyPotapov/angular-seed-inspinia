@@ -1,13 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, OnDestroy } from '@angular/core';
 
-declare var jQuery:any;
+declare var jQuery: any;
 
 @Component({
     moduleId: module.id,
     selector: 'blank',
     templateUrl: 'blank.template.html'
 })
-export class blankComponent {
+export class blankComponent implements AfterViewInit, OnDestroy {
 
     ngAfterViewInit() {
         jQuery('body').addClass('gray-bg');
