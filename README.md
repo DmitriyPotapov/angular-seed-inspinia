@@ -1,4 +1,4 @@
-+[![Try it](https://img.shields.io/badge/try-live%20demo-783189.svg)](http://0x68.xyz)
+[![Try it](https://img.shields.io/badge/try-live%20demo-783189.svg)](http://0x68.xyz)
 [![Build Status](https://ci.appveyor.com/api/projects/status/github/DmitriyPotapov/angular-seed-inspinia?svg=true)](https://ci.appveyor.com/project/DmitriyPotapov/angular-seed-inspinia)
 [![Build Status](https://travis-ci.org/DmitriyPotapov/angular-seed-inspinia.svg?branch=master)](https://travis-ci.org/DmitriyPotapov/angular-seed-inspinia)
 [![Dependency Status](https://david-dm.org/DmitriyPotapov/angular-seed-inspinia.svg)](https://david-dm.org/DmitriyPotapov/angular-seed-inspinia)
