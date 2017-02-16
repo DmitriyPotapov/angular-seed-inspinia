@@ -43,4 +43,4 @@ cache: node_modules -> package.json
 
 artifacts:
   - path: dist\prod\
-    name: AngularApp
+    name: 0x68.xyz
