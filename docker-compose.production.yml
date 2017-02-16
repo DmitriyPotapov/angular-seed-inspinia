@@ -1,4 +1,4 @@
-version: '1.5.2'
+version: '2'
 
 services:
 
@@ -24,7 +24,7 @@ services:
     networks:
       - prod-network
     ports:
-      - '5555:80'
+      - '80:80'
     volumes:
       - ./.docker/nginx.conf:/etc/nginx/conf.d/angular-seed.template
       - ./dist/prod:/var/www/dist/prod
