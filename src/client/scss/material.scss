@@ -1,11 +1,11 @@
-@import '@angular/material/core/theming/all-theme';
-@include md-core();
-@include angular-material-theme($theme);
 
 $primary: md-palette($md-amber, 800);
 $accent:  md-palette($md-light-blue, 600, A100, A400);
 $warn:    md-palette($md-red, 600);
 $theme: md-light-theme($primary, $accent, $warn);
+
+@include md-core();
+@include angular-material-theme($theme);
 
 .full-width {
   width: 100%;
