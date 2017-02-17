@@ -4,6 +4,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { MaterialModule } from '@angular/material';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ROUTES } from './app.routes';
 import { AppComponent } from './app.component';
@@ -27,11 +28,13 @@ import { LayoutsModule } from './components/common/layouts/layouts.module';
     LoginModule,
     RegisterModule,
     LayoutsModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(ROUTES),
+    MaterialModule
   ],
   declarations: [AppComponent],
   providers: [{
-    provide: APP_BASE_HREF, useValue: '<%= APP_BASE %>' }
+    provide: APP_BASE_HREF, useValue: '<%= APP_BASE %>'
+  }
     /*,{provide: LocationStrategy, useClass: HashLocationStrategy}*/],
   bootstrap: [AppComponent]
 
