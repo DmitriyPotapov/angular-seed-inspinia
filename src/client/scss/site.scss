@@ -1,0 +1,36 @@
+
+.full-width {
+  width: 100%;
+}
+.half-width{
+  width: 50%;
+  float:left;
+}
+
+.login-header {
+  height: 100px;
+  width: 100%;
+  font-size: 18px;
+  //background: #1AB394;
+  background: url("../assets/img/patterns/4.png") no-repeat;
+  color: white;
+  line-height: 150%;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.login-form {
+  box-sizing: border-box;
+  width: 300px;
+  margin: 100px auto 0;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding-bottom: 40px;
+  border-radius: 0;
+}
+.login-form .login-header {
+  box-sizing: border-box;
+  padding: 20px;
+}
+form > .login{
+  margin: 15px;
+}

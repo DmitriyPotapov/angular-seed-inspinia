@@ -10,7 +10,7 @@
 declare var jQuery: any;
 
 export function correctHeight() {
-
+ console.log('correctHeight');
   var pageWrapper = jQuery('#page-wrapper');
   var navbarHeight = jQuery('nav.navbar-default').height();
   var wrapperHeigh = pageWrapper.height();

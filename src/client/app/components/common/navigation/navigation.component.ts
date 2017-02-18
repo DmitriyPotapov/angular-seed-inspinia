@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import { correctHeight, detectBody } from '../../../app.helpers';
 declare var jQuery: any;
 
 @Component({
@@ -15,9 +15,16 @@ export class NavigationComponent implements AfterViewInit {
 
     ngAfterViewInit() {
         jQuery('#side-menu').metisMenu();
+         // Correct height of wrapper after metisMenu animation.
+    jQuery('.metismenu a').click(() => {
+      setTimeout(() => {
+        correctHeight();
+      }, 300);
+    });
     }
 
     activeRoute(routename: string): boolean {
         return this.router.url.indexOf(routename) > -1;
     }
 }
+

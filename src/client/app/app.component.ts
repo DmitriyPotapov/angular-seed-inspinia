@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { Config } from './shared/config/env.config';
 import { correctHeight, detectBody } from './app.helpers';
 import './operators';
@@ -23,12 +23,9 @@ export class AppComponent implements AfterViewInit {
       correctHeight();
       detectBody();
     });
-
-    // Correct height of wrapper after metisMenu animation.
-    jQuery('.metismenu a').click(() => {
-      setTimeout(() => {
-        correctHeight();
-      }, 300);
+    jQuery(document).ready(function () {
+      correctHeight();
+      detectBody();
     });
   }
 }
