@@ -138,9 +138,10 @@
     "traceur": "^0.0.111",
     "ts-node": "^2.0.0",
     "tslint": "^4.3.0",
-    "typescript": "~2.1.5",
+    "typescript": "2.3.2",
     "walk": "^2.3.9",
-    "yargs": "^6.0.0"
+    "yargs": "^6.0.0",
+    "fsevents": "*"
   },
   "dependencies": {
     "@angular/animations": "*",
