@@ -6,8 +6,8 @@
     "url": "https://github.com/mgechev/angular-seed"
   },
   "engines": {
-    "node": ">=7.5.0",
-    "npm": ">=4.1.2"
+    "node": "7.5.0",
+    "npm": "4.1.2"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
