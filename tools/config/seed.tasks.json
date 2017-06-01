@@ -33,7 +33,6 @@
     "build.assets.prod",
     "build.html_css",
     "build.fonts",
-    "build.css_images",
     "copy.prod",
     "build.js.prod",
     "build.bundles",
