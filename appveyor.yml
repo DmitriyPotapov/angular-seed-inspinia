@@ -41,4 +41,4 @@ notifications:
 cache: node_modules -> package.json
 
 artifacts:
-  - path dist\prod\*
+  - path: dist\prod\*
