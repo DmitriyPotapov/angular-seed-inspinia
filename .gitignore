@@ -1,7 +1,7 @@
 # Logs
 logs
 *.log
-
+.vs
 # Runtime data
 pids
 *.pid
@@ -41,12 +41,14 @@ ts-node
 
 /tools/**/*.js
 dist
+wwwroot/*
 dev
 docs
 lib
 test
 tmp
-
+bin
+/.vs
 gulpfile.js
 gulpfile.js.map
 

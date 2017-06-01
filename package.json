@@ -1,5 +1,5 @@
 {
-  "name": "angular-seed",
+  "name": "angular-seed-inspinia",
   "version": "0.0.1",
   "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
   "repository": {
@@ -48,9 +48,9 @@
     "compodoc": "node_modules/.bin/compodoc -p src/client/tsconfig.json",
     "serve.compodoc": "node_modules/.bin/compodoc -s",
     "heroku-prebuild": "node -v",
-    "compile-inspinia": "node-sass src/client/scss/inspinia/inspinia.scss src/client/scss/inspinia/inspinia.build.scss"
+    "compile-inspinia": "node-sass src/frontend/scss/inspinia/inspinia.scss src/frontend/scss/inspinia/inspinia.build.scss"
   },
-  "author": "Minko Gechev <mgechev>",
+  "author": "Dmytro Potapov",
   "license": "MIT",
   "devDependencies": {
     "@angular/compiler-cli": "*",
@@ -140,8 +140,7 @@
     "tslint": "^4.3.0",
     "typescript": "2.3.2",
     "walk": "^2.3.9",
-    "yargs": "^6.0.0",
-    "fsevents": "*"
+    "yargs": "^6.0.0"
   },
   "dependencies": {
     "@angular/animations": "*",
@@ -165,7 +164,8 @@
     "hammerjs": "^2.0.8",
     "intl": "^1.2.5",
     "jquery": "^3.1.1",
-    "metismenu": "^2.5.0",
+    "jquery-slimscroll": "^1.3.8",
+    "metismenu": "^2.7.0",
     "ng2-bootstrap": "*",
     "ngx-toastr": "*",
     "rxjs": "~5.4.0",

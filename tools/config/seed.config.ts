@@ -1,8 +1,9 @@
-import { join } from 'path';
 import * as slash from 'slash';
-import { argv } from 'yargs';
 
 import { BuildType, ExtendPackages, InjectableDependency } from './seed.config.interfaces';
+
+import { argv } from 'yargs';
+import { join } from 'path';
 
 /************************* DO NOT CHANGE ************************
  *
@@ -51,9 +52,15 @@ export class SeedConfig {
    */
   PORT = argv['port'] || 5555;
 
+   /**
+   The hostname of backend server (for api)
+   * @type {string}
+   */
+  BACKEND_HOST = 'http://localhost:11324';
 
-   FONT_AWESOME_SRC     = 'node_modules/font-awesome/';
-   BOOTSTRAP_SRC        = 'node_modules/bootstrap/dist/';
+  FONT_AWESOME_SRC = 'node_modules/font-awesome/';
+
+  BOOTSTRAP_SRC = 'node_modules/bootstrap/dist/';
   /**
    * The root folder of the project (up two levels from the current directory).
    */
@@ -130,7 +137,7 @@ export class SeedConfig {
    * The default directory is `client`.
    * @type {string}
    */
-  APP_CLIENT = argv['client'] || 'client';
+  APP_CLIENT = argv['frontend'] || 'frontend';
 
   /**
    * The bootstrap file to be used to boot the application.
@@ -218,19 +225,19 @@ export class SeedConfig {
    * The base folder for built files.
    * @type {string}
    */
-  DIST_DIR = 'dist';
+  DIST_DIR = 'wwwroot';
 
   /**
    * The folder for built files in the `dev` environment.
    * @type {string}
    */
-  DEV_DEST = `${this.DIST_DIR}/dev`;
+  DEV_DEST = `${this.DIST_DIR}`;
 
   /**
    * The folder for the built files in the `prod` environment.
    * @type {string}
    */
-  PROD_DEST = `${this.DIST_DIR}/prod`;
+  PROD_DEST = `${this.DIST_DIR}`;
 
   /**
    * The folder for the built files of the e2e-specs.
@@ -242,7 +249,7 @@ export class SeedConfig {
    * The folder for temporary files.
    * @type {string}
    */
-  TMP_DIR = `${this.DIST_DIR}/tmp`;
+  TMP_DIR = `${this.DIST_DIR}/.tmp`;
 
   /**
    * The folder for the built files, corresponding to the current environment.
@@ -379,19 +386,22 @@ export class SeedConfig {
       '@angular/forms': 'node_modules/@angular/forms/bundles/forms.umd.js',
       '@angular/http': 'node_modules/@angular/http/bundles/http.umd.js',
       '@angular/platform-browser': 'node_modules/@angular/platform-browser/bundles/platform-browser.umd.js',
+      '@angular/animations/browser': 'node_modules/@angular/animations/bundles/animations-browser.umd.js',
+      '@angular/platform-browser/animations': 'node_modules/@angular/platform-browser/bundles/platform-browser-animations.umd.js',
       '@angular/platform-browser-dynamic': 'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js',
       '@angular/router': 'node_modules/@angular/router/bundles/router.umd.js',
-
+      '@angular/animations': 'node_modules/@angular/animations/bundles/animations.umd.js',
       '@angular/common/testing': 'node_modules/@angular/common/bundles/common-testing.umd.js',
       '@angular/compiler/testing': 'node_modules/@angular/compiler/bundles/compiler-testing.umd.js',
       '@angular/core/testing': 'node_modules/@angular/core/bundles/core-testing.umd.js',
       '@angular/http/testing': 'node_modules/@angular/http/bundles/http-testing.umd.js',
       '@angular/platform-browser/testing':
-        'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
+      'node_modules/@angular/platform-browser/bundles/platform-browser-testing.umd.js',
       '@angular/platform-browser-dynamic/testing':
-        'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
+      'node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic-testing.umd.js',
       '@angular/router/testing': 'node_modules/@angular/router/bundles/router-testing.umd.js',
       '@angular/material': 'node_modules/@angular/material/bundles/material.umd.js',
+      'angular2-jwt': 'node_modules/angular2-jwt/angular2-jwt.js',
       'app/*': '/app/*',
       // For test config
       'dist/dev/*': '/base/dist/dev/*',
@@ -426,51 +436,69 @@ export class SeedConfig {
       [join(this.TMP_DIR, this.BOOTSTRAP_DIR, '*')]: `${this.TMP_DIR}/${this.BOOTSTRAP_DIR}/*`,
       'dist/tmp/node_modules/*': 'dist/tmp/node_modules/*',
       'node_modules/*': 'node_modules/*',
-      '*': 'node_modules/*'
+      '*': 'node_modules/*',
+      '@angular/animations/browser': 'node_modules/@angular/animations/bundles/animations-browser.umd.js',
+      '@angular/platform-browser/animations': 'node_modules/@angular/platform-browser/bundles/platform-browser-animations.umd.js',
     },
     packages: {
+      '@angular/animations': {
+        main: 'bundles/animations.umd.js',
+        defaultExtension: 'js'
+      },
       '@angular/common': {
-        main: 'index.js',
+        main: 'bundles/common.umd.js',
         defaultExtension: 'js'
       },
       '@angular/compiler': {
-        main: 'index.js',
+        main: 'bundles/compiler.umd.js',
         defaultExtension: 'js'
       },
       '@angular/core/testing': {
-        main: 'index.js',
+        main: 'bundles/core-testing.umd.js',
         defaultExtension: 'js'
       },
       '@angular/core': {
-        main: 'index.js',
+        main: 'bundles/core.umd.js',
         defaultExtension: 'js'
       },
       '@angular/forms': {
-        main: 'index.js',
+        main: 'bundles/forms.umd.js',
         defaultExtension: 'js'
       },
       '@angular/http': {
-        main: 'index.js',
+        main: 'bundles/http.umd.js',
         defaultExtension: 'js'
       },
       '@angular/platform-browser': {
-        main: 'index.js',
+        main: 'bundles/platform-browser.umd.js',
+        defaultExtension: 'js'
+      },
+      '@angular/platform-browser/animations': {
+        main: 'bundles/platform-browser-animations.umd.js',
         defaultExtension: 'js'
       },
       '@angular/platform-browser-dynamic': {
-        main: 'index.js',
+        main: 'bundles/platform-browser-dynamic.umd.js',
         defaultExtension: 'js'
       },
       '@angular/router': {
-        main: 'index.js',
+        main: 'bundles/router.umd.js',
         defaultExtension: 'js'
       },
-      '@angular/material' : {
-        main: 'index.js',
+      '@angular/service-worker': {
+        main: 'bundles/service-worker.umd.js',
+        defaultExtension: 'js'
+      },
+      '@angular/material': {
+        main: 'bundles/material.umd.js',
         defaultExtension: 'js'
       },
       'rxjs': {
         main: 'Rx.js',
+        defaultExtension: 'js'
+      },
+      'angular2-jwt': {
+        main: 'angular2-jwt.js',
         defaultExtension: 'js'
       }
     }
@@ -522,6 +550,11 @@ export class SeedConfig {
      * Example: `npm start -- --b`
      * @return {any}
      */
+    /**
+    * Configure proxy middleware (proxy to api)
+    */
+
+
     let defaults = {
       'browser-sync': {
         middleware: [require('connect-history-api-fallback')({

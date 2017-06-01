@@ -33,6 +33,7 @@
     "build.assets.prod",
     "build.html_css",
     "build.fonts",
+    "build.css_images",
     "copy.prod",
     "build.js.prod",
     "build.bundles",
@@ -98,7 +99,10 @@
     "server.start",
     "watch.dev"
   ],
-
+  "serve.dev.core": [
+    "build.dev",
+    "watch.dev"
+  ],
   "serve.e2e": [
     "tslint",
     "build.dev",

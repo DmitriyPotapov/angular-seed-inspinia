@@ -1,4 +1,4 @@
-import * as gulpLoadPlugins from 'gulp-load-plugins';
+﻿import * as gulpLoadPlugins from 'gulp-load-plugins';
 import { join } from 'path';
 import ts = require('gulp-typescript/release/main');
 

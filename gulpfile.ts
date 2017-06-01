@@ -1,3 +1,4 @@
+/// <binding />
 import * as gulp from 'gulp';
 import * as util from 'gulp-util';
 import * as runSequence from 'run-sequence';
@@ -10,7 +11,6 @@ loadTasks(Config.SEED_TASKS_DIR);
 loadTasks(Config.PROJECT_TASKS_DIR);
 
 loadCompositeTasks(Config.SEED_COMPOSITE_TASKS, Config.PROJECT_COMPOSITE_TASKS);
-
 
 // --------------
 // Clean dev/coverage that will only run once
