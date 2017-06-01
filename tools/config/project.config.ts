@@ -11,10 +11,7 @@ export class ProjectConfig extends SeedConfig {
 
   PROJECT_TASKS_DIR = join(process.cwd(), this.TOOLS_DIR, 'tasks', 'project');
 
-  CSS_IMAGE_DEST = `${this.CSS_DEST}/images`;
-  CSS_IMAGE_SRC = [''];
-  THEME_FONTS_DEST = `${this.APP_DEST}/css/fonts`;
-  THEME_FONTS_SRC = [ '' ];
+
   constructor() {
     super();
 
