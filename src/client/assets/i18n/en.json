@@ -1,0 +1,17 @@
+{
+    "ERRORS" : {
+        "SWW": "We're sorry, but something went wrong."
+    },
+    "LOGIN": {
+        "WELCOME": "Welcome",
+        "LOG_IN_TO_CONTINUE": "Log in to continue",
+        "LOGIN": "Login",
+        "USERNAME": "Your email",
+        "PWD": "Password",
+        "PASSWORD_IS_REQUIRED_HINT": "Password is required",
+        "EMAIL_IS_REQUIRED_HINT": "Email is required",
+        "EMAIL_PATTERN_HINT": "user@example.com",
+        "FORGOT_PASSWORD": "Forgot password",
+        "CREATE_AN_ACCOUNT": "Create an account"
+    }
+}
