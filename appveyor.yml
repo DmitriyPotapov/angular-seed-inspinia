@@ -39,3 +39,6 @@ notifications:
     on_build_status_changed: true
 
 cache: node_modules -> package.json
+
+artifacts:
+  - path dist\prod\*
