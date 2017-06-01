@@ -16,7 +16,8 @@ interface LoginFormData {
 export class LoginComponent implements OnInit {
 
   returnUrl: string;
-
+  username: string;
+  password: string;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
