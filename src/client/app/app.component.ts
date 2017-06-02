@@ -4,6 +4,7 @@ import { AfterViewInit, Component } from '@angular/core';
 import { correctHeight, detectBody } from './app.helpers';
 
 import { Config } from './shared/config/env.config';
+import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 declare var jQuery: any;
@@ -17,9 +18,10 @@ declare var jQuery: any;
   styleUrls: ['app.component.css'],
 })
 export class AppComponent implements AfterViewInit {
-  constructor(public translate: TranslateService) {
+  constructor(public translate: TranslateService, router: Router) {
+    router.navigate(['/home']);
     console.log('Environment config', Config);
-    translate.addLangs(['en'/*,'ru'*/]);
+    translate.addLangs(['en','ru']);
     translate.setDefaultLang('en');
     let browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');

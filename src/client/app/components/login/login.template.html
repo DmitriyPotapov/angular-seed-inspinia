@@ -7,7 +7,7 @@
             <p>{{'LOGIN.LOG_IN_TO_CONTINUE' | translate}}</p>
         </div>
 
-        <form #f="ngForm" (ngSubmit)="onLogin(f.value)" *ngIf="isLoggedIn" class="m-t" style="margin: 15px;">
+        <form #f="ngForm" (ngSubmit)="onLogin(f.value)" *ngIf="!isLoggedIn" class="m-t" style="margin: 15px;">
             <md-input-container class="full-width">
                 <input mdInput type="email" name="username" placeholder="{{'LOGIN.USERNAME' | translate}}" required="required" [(ngModel)]="username">
                 <md-hint *ngIf="f.hasError('required','username') && f.controls['username'].touched" [ngStyle]="{'color': 'red'}" align="start">{{'LOGIN.EMAIL_IS_REQUIRED_HINT' | translate}}</md-hint>
