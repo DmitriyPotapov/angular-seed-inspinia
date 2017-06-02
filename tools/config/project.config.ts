@@ -15,7 +15,7 @@ export class ProjectConfig extends SeedConfig {
     super();
     this.ENABLE_SCSS = false;
     this.APP_TITLE = 'Angular app';
-    // this.GOOGLE_ANALYTICS_ID = 'Your site's ID';
+    this.GOOGLE_ANALYTICS_ID = 'UA-100351282-1';
     /* Enable typeless compiler runs (faster) between typed compiler runs. */
     // this.TYPED_COMPILE_INTERVAL = 5;
 

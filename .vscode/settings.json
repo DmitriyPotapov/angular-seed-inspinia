@@ -5,6 +5,6 @@
     "**/coverage_js": true,
     "**/coverage": true,
     "**/dist": true,
-    "**/for-porting": false
+    "**/for-porting": true
   }
 }

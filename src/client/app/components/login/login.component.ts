@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
   returnUrl: string;
   username: string;
   password: string;
+  isLoggedIn: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -27,6 +28,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
     // reset login status
     // get return url from route parameters or default to '/'
+    this.isLoggedIn = this.auth.loggedIn();
     this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
   }
 
