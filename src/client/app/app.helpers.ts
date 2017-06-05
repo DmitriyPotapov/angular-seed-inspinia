@@ -48,9 +48,9 @@ export function detectBody() {
     height: '100%',
     railOpacity: 0.9
   });
-  jQuery('.navbar-static-top').removeClass('navbar-static-top').addClass('navbar-fixed-top');
-  jQuery('body').removeClass('boxed-layout');
-  jQuery('body').addClass('fixed-nav').addClass('fixed-nav-basic');
+  // jQuery('.navbar-static-top').removeClass('navbar-static-top').addClass('navbar-fixed-top');
+  // jQuery('body').removeClass('boxed-layout');
+  // jQuery('body').addClass('fixed-nav').addClass('fixed-nav-basic');
 }
 
 export function smoothlyMenu() {
