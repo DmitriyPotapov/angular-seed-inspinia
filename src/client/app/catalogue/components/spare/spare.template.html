@@ -1,0 +1,21 @@
+<table class="table table-striped" *ngIf="currentView === 'spares'">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Code</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let spare of spares" (click)="loadSpareDetalization(spare.spareId)">
+            <td>{{spare.number}}</td>
+            <td>{{spare.name}}</td>
+            <td>{{spare.code}}</td>
+        </tr>
+    </tbody>
+</table> 
+
+<div *ngIf="currentView ==='spareDetalization' && spareDetalization !== undefined && spareDetalization !== null">
+    <a (click)="backToSparesView()">Back to spares list</a>
+<spare-detalization [spareDetalization]="spareDetalization"></spare-detalization>
+</div>

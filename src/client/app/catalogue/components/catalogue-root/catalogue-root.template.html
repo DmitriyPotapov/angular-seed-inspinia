@@ -1,0 +1,65 @@
+<!--<div class="row wrapper border-bottom white-bg page-heading" style="padding-top: 10px; padding-bottom: 10px;">
+    <div class="col-lg-10">
+        <ol class="breadcrumb">
+            <li>
+                <a (click)="loadVendors()">Vendors</a>
+            </li>
+            <li>
+                <a (click)="loadVendors()">Classifications</a>
+            </li>
+            <li>
+                <a (click)="loadVendors()">Models</a>
+            </li>
+            <li>
+                <a (click)="loadVendors()">Modifications</a>
+            </li>
+            <li>
+                <a (click)="loadVendors()">Assemblies</a>
+            </li>
+
+        </ol>
+    </div>
+</div>--> 
+<div class="row wrapper wrapper-content">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <button class="btn btn-default btn-circle pull-left" type="button">
+                <i class="fa fa-check"></i>
+            </button>
+        </div>
+        <div class="ibox-content">
+            <div id="catalogue-view">
+                <router-outlet></router-outlet>
+                <!--
+                
+                <div id="assemblySpares-view" *ngIf="assemblySpares !== undefined && currentView === 'assemblySpares'">
+                    <h3>Assembly: {{assemblySpares.assembly.name}}, Code: {{assemblySpares.assembly.code}} </h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="{{ASSETS_FOLDER}}{{assemblySpares.assembly.image}}" style="width: 90%; height: 90%;">
+                        </div>
+                        <div class="col-md-6">
+                            <div *ngIf="assemblySpares.spare !== undefined && assemblySpares.spare !== null">
+                                <p>Spares</p>
+                                <spare-view [spares]="assemblySpares.spare"></spare-view>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <hr>
+                        <div *ngIf="assemblySpares.assemblies !== undefined && assemblySpares.assemblies !== null">
+                            <p>Sub assemblies</p>
+                            <assembly-view *ngFor="let assembly of assemblySpares.assemblies" [assembly]="assembly" (click)="loadAssemblySpares(assembly.id)"></assembly-view>
+                        </div>
+                    </div>
+
+                </div>-->
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</div>

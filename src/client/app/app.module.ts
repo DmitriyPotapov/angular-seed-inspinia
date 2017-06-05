@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { CatalogueRootModule } from './catalogue/components/catalogue-root/catalogue-root.module'
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,7 @@ export function HttpLoaderFactory(http: Http) {
     LoginModule,
     RegisterModule,
     LayoutsModule,
+    CatalogueRootModule,
     BrowserAnimationsModule,
     TranslateModule.forRoot({
       loader: {

@@ -1,0 +1,18 @@
+<!--spareDetalization-->
+<h2>{{spareDetalization.spare.name}} properties</h2>
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let spareProperty of spareDetalization.spareProperty">
+                <td>{{spareProperty.name}}</td>
+                <td>{{spareProperty.value}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
