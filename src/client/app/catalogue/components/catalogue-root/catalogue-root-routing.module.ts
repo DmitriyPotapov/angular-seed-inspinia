@@ -18,7 +18,8 @@ import { VendorComponent } from '../vendor/vendor.component';
             {
                 path: '',
                 component: BasicComponent,
-                children: [{
+                children: [
+                    {
                     path: '',
                     component: CatalogueRootComponent,
                     children: [

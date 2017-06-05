@@ -19,7 +19,7 @@ declare var jQuery: any;
 })
 export class AppComponent implements AfterViewInit {
   constructor(public translate: TranslateService, router: Router) {
-    router.navigate(['/home']);
+   // router.navigate(['/vendor']);
     console.log('Environment config', Config);
     translate.addLangs(['en','ru']);
     translate.setDefaultLang('en');
