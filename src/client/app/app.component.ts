@@ -1,10 +1,11 @@
 import './operators';
 
-import { AfterViewInit, Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { correctHeight, detectBody, smoothlyMenu } from './app.helpers';
 
+import { AuthService } from './services/index';
 import { Config } from './shared/config/env.config';
-import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 declare var jQuery: any;
@@ -17,14 +18,23 @@ declare var jQuery: any;
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
-  constructor(public translate: TranslateService, router: Router) {
-   // router.navigate(['/vendor']);
+export class AppComponent implements AfterViewInit, OnInit {
+  isLoggedIn: boolean = false;
+  constructor(public translate: TranslateService,
+    private auth: AuthService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
+    // router.navigate(['/vendor']);
     console.log('Environment config', Config);
-    translate.addLangs(['en','ru']);
+    translate.addLangs(['en', 'ru']);
     translate.setDefaultLang('en');
     let browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
+  }
+  ngOnInit() {
+    console.debug(this.router.url);
+    // this.isLoggedIn = this.auth.loggedIn();
+    this.isLoggedIn = true;
   }
   ngAfterViewInit() {
     // Run correctHeight function on load and resize window event
@@ -39,6 +49,9 @@ export class AppComponent implements AfterViewInit {
     //for remove sidebar uncomment this
     // jQuery('body').addClass('mini-navbar');
     // jQuery('#toogleNavigation').remove();
-
+    
+  }
+  isBlankLayout(): boolean {
+    return this.router.url.indexOf('login') > -1 || this.router.url.indexOf('register') > -1;
   }
 }
