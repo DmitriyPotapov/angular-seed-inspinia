@@ -33,6 +33,6 @@ export class ModelComponent implements OnInit {
         );
     }
     selectModel(model: Model) {
-        this.router.navigate(['modification', model.modelId]);
+        this.router.navigate(['modification', model.modelId],{relativeTo: this.activatedRoute.parent });
     }
 }

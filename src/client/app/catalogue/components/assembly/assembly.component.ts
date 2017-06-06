@@ -35,6 +35,6 @@ export class AssemblyComponent implements OnInit {
         );
     }
     selectAssembly(assembly: Assembly) {
-        this.router.navigate(['assemblyspares', assembly.assemblyId]);
+        this.router.navigate(['assemblyspares', assembly.assemblyId], { relativeTo: this.activatedRoute.parent });
     }
 }

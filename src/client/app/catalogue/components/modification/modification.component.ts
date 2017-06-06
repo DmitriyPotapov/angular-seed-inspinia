@@ -33,6 +33,6 @@ export class ModificationComponent implements OnInit {
         );
     }
     selectModification(modification: Modification) {
-        this.router.navigate(['assembly', modification.modificationId]);
+        this.router.navigate(['assembly', modification.modificationId], { relativeTo: this.activatedRoute.parent });
     }
 }

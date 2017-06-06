@@ -34,6 +34,6 @@ export class ClassificationComponent implements OnInit {
         );
     }
     selectClassification(classification: Classification) {
-        this.router.navigate(['model', classification.classificationId]);
+        this.router.navigate(['model', classification.classificationId], { relativeTo: this.activatedRoute.parent });
     }
 }

@@ -28,6 +28,6 @@ export class VendorComponent implements OnInit {
         );
     }
     selectVendor(vendor: Vendor) {
-        this.router.navigate(['classification', vendor.vendorId]);
+        this.router.navigate(['classification', vendor.vendorId], {relativeTo: this.activatedRoute.parent});
     }
 }

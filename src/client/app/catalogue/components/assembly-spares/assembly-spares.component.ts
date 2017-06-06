@@ -35,6 +35,6 @@ export class AssemblySparesComponent implements OnInit {
         console.log(this.assemblySpares);
     }
     selectSubAssembly(assembly: Assembly) {
-        this.router.navigate(['assemblyspares', assembly.assemblyId]);
+        this.router.navigate(['assemblyspares', assembly.assemblyId], { relativeTo: this.activatedRoute.parent });
     }
 }
