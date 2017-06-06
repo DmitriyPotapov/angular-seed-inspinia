@@ -1,7 +1,7 @@
 import './operators';
 
 import { AfterViewInit, Component } from '@angular/core';
-import { correctHeight, detectBody } from './app.helpers';
+import { correctHeight, detectBody, smoothlyMenu } from './app.helpers';
 
 import { Config } from './shared/config/env.config';
 import { Router } from '@angular/router';
@@ -36,5 +36,9 @@ export class AppComponent implements AfterViewInit {
       correctHeight();
       detectBody();
     });
+    //for remove sidebar uncomment this
+    // jQuery('body').addClass('mini-navbar');
+    // jQuery('#toogleNavigation').remove();
+
   }
 }
