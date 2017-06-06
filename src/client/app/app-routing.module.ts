@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
          (do not place feature module routes here, use an own -routing.module.ts in the feature instead)
        */
       // Main redirect
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', redirectTo: '/catalogue/vendor', pathMatch: 'full' },
       // Handle all other routes
       { path: '**', component: HomeComponent, canActivate: [AuthGuard] }
     ])
