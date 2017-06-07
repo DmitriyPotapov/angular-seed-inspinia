@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Modular starter project for Angular 2 (and beyond) with statically typed build and AoT compilation",
   "repository": {
-    "url": "https://github.com/mgechev/angular-seed"
+    "url": "https://gitlab.com/d.potapov/angular-seed-inspinia"
   },
   "scripts": {
     "build.dev": "gulp build.dev --color --env-config dev",
