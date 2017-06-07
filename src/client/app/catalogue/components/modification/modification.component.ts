@@ -22,7 +22,7 @@ export class ModificationComponent implements OnInit {
     ngOnInit() {
         console.log('ModificationComponent init');
         this.activatedRoute.params.forEach((params: Params) => {
-            let id = +params["id"];
+            let id = +params['id'];
             this.loadModifications(id);
         });
     }

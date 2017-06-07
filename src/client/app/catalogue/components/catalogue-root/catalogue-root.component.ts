@@ -10,7 +10,7 @@ import { correctHeight } from '../../../app.helpers';
     templateUrl: 'catalogue-root.template.html'
 })
 
-export class CatalogueRootComponent implements OnInit {
+export class CatalogueRootComponent {
     vendors: Vendor[];
     classifications: Classification[];
     models: Model[];
@@ -20,10 +20,7 @@ export class CatalogueRootComponent implements OnInit {
     currentView: string;
     ASSETS_FOLDER: string = '/assets/img/vendors/';
     constructor(private catalogueService: CatalogueService) { }
-    ngOnInit() { }
-   
-    
-    
+
     loadAssemblySpares(assembly: number) {
         this.catalogueService.getAssemblySpares(assembly).subscribe(
             result => { this.assemblySpares = result; },

@@ -2,7 +2,7 @@ import { AssemblyComponent } from '../assembly/assembly.component';
 import { AssemblySparesComponent } from '../assembly-spares/assembly-spares.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { CatalogueRootComponent } from './catalogue-root.component';
-import { CatalogueRootRoutingModule } from './catalogue-root-routing.module'
+import { CatalogueRootRoutingModule } from './catalogue-root-routing.module';
 import { CatalogueService } from '../../services/catalogue.service';
 import { ClassificationComponent } from '../classification/classification.component';
 import { ModelComponent } from '../model/model.component';
@@ -23,7 +23,7 @@ import { VendorComponent } from '../vendor/vendor.component';
         AssemblyComponent,
         SpareComponent,
         SpareDetalizationComponent,
-        AssemblySparesComponent 
+        AssemblySparesComponent
     ],
     providers: [CatalogueService]
 })

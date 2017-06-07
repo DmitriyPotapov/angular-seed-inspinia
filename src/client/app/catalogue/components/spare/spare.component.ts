@@ -25,10 +25,9 @@ export class SpareComponent implements OnInit {
     loadSpareDetalization(spare: number) {
         this.catalogueService.getSpareDetalization(spare).subscribe(
             result => { this.processSpareDetalizationResult(result); },
-            error => { console.log(error) }
+            error => { console.log(error); }
         );
-       
-    }    
+    }
     processSpareDetalizationResult(result: SpareDetalization) {
         this.spareDetalization = result;
         if (this.spareDetalization.spareProperty !== undefined

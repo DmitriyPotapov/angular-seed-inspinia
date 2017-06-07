@@ -22,7 +22,7 @@ export class ModelComponent implements OnInit {
     ngOnInit() {
         console.log('ModelComponent init');
         this.activatedRoute.params.forEach((params: Params) => {
-            let id = +params["id"];
+            let id = +params['id'];
             this.loadModels(id);
         });
     }

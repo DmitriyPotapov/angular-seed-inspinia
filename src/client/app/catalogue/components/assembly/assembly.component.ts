@@ -1,4 +1,4 @@
-import { ActivatedRoute, Params, Router } from "@angular/router";
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Assembly } from '../../models/index';
@@ -23,7 +23,7 @@ export class AssemblyComponent implements OnInit {
     ngOnInit() {
         console.log('AssemblyComponent init');
         this.activatedRoute.params.forEach((params: Params) => {
-            let id = +params["id"];
+            let id = +params['id'];
             this.loadAssemblies(id);
         });
     }

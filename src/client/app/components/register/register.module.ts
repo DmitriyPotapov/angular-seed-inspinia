@@ -3,7 +3,7 @@ import { MdButtonModule, MdInputModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RegisterComponent } from './register.component';
-import { RegisterRoutingModule } from './register-routing.module'
+import { RegisterRoutingModule } from './register-routing.module';
 
 @NgModule({
     declarations: [RegisterComponent],

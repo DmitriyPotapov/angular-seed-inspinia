@@ -1,4 +1,4 @@
-import { ActivatedRoute, Params, Router } from "@angular/router";
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 
 import { CatalogueService } from '../../services/catalogue.service';
@@ -17,13 +17,13 @@ export class ClassificationComponent implements OnInit {
     constructor(private catalogueService: CatalogueService,
         private router: Router,
         private activatedRoute: ActivatedRoute) {
-        
+
     }
     ngOnInit() {
         console.log('ClassificationComponent init');
 
         this.activatedRoute.params.forEach((params: Params) => {
-            let id = +params["id"];
+            let id = +params['id'];
             this.loadClassifications(id);
         });
     }

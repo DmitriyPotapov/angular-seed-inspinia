@@ -1,7 +1,7 @@
-import { ActivatedRoute, Router } from "@angular/router"
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 
-import { CatalogueService } from '../../services/catalogue.service'
+import { CatalogueService } from '../../services/catalogue.service';
 import { Vendor } from '../../models/index';
 
 @Component({
@@ -24,7 +24,7 @@ export class VendorComponent implements OnInit {
     loadVendors() {
         this.catalogueService.getVendors().subscribe(
             result => { this.vendors = result; },
-            error => { console.log(error); }
+            error => { console.log(error); },
         );
     }
     selectVendor(vendor: Vendor) {

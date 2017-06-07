@@ -41,7 +41,6 @@ export class AppComponent implements AfterViewInit {
     //for remove sidebar uncomment this
     // jQuery('body').addClass('mini-navbar');
     // jQuery('#toogleNavigation').remove();
-    
   }
   isBlankLayout(): boolean {
     return this.router.url.indexOf('login') > -1 || this.router.url.indexOf('register') > -1;
