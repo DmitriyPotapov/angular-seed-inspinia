@@ -1,20 +1,37 @@
-import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '@angular/common';
-import { AuthGuard, AuthService, SharedServices } from './services/index';
-import { HomeModule, LoginModule, MinorViewModule, RegisterModule } from './components/index';
-import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
+import {
+  APP_BASE_HREF,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
+import {
+  AuthGuard,
+  AuthService,
+  SharedServices,
+} from './services/index';
+import {
+  FooterModule,
+  HomeModule,
+  LoginModule,
+  MinorViewModule,
+  NavigationModule,
+  RegisterModule,
+  TopnavbarModule,
+} from './components/index';
+import {
+  TranslateLoader,
+  TranslateModule,
+  TranslateService,
+} from '@ngx-translate/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
-import { CatalogueRootModule } from './catalogue/components/catalogue-root/catalogue-root.module'
-import { FooterModule } from '../app/components/layout/footer/footer.module';
+import { CatalogueRootModule } from './catalogue/components/index'
 import { Http } from '@angular/http';
 import { HttpModule } from '@angular/http';
-import { NavigationModule } from '../app/components/layout/navigation/navigation.module';
 import { NgModule } from '@angular/core';
 import { SharedModule } from './shared/shared.module';
-import { TopnavbarModule } from '../app/components/layout/topnavbar/topnavbar.module';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 // AoT requires an exported function for factories

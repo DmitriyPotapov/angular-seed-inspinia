@@ -1,7 +1,7 @@
 import './operators';
 
 import { ActivatedRoute, Router } from '@angular/router';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { correctHeight, detectBody, smoothlyMenu } from './app.helpers';
 
 import { AuthService } from './services/index';
@@ -18,23 +18,15 @@ declare var jQuery: any;
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
 })
-export class AppComponent implements AfterViewInit, OnInit {
+export class AppComponent implements AfterViewInit {
   isLoggedIn: boolean = false;
   constructor(public translate: TranslateService,
-    private auth: AuthService,
-    private router: Router,
-    private activatedRoute: ActivatedRoute) {
-    // router.navigate(['/vendor']);
+    private router: Router) {
     console.log('Environment config', Config);
     translate.addLangs(['en', 'ru']);
     translate.setDefaultLang('en');
     let browserLang = translate.getBrowserLang();
     translate.use(browserLang.match(/en|ru/) ? browserLang : 'en');
-  }
-  ngOnInit() {
-    console.debug(this.router.url);
-    // this.isLoggedIn = this.auth.loggedIn();
-    this.isLoggedIn = true;
   }
   ngAfterViewInit() {
     // Run correctHeight function on load and resize window event
