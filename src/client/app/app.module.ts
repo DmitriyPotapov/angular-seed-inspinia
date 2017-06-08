@@ -65,6 +65,6 @@ export function HttpLoaderFactory(http: Http) {
     useValue: '<%= APP_BASE %>'
   }],
   bootstrap: [AppComponent]
-
 })
+
 export class AppModule { }
