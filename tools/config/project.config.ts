@@ -131,7 +131,7 @@ export class ProjectConfig extends SeedConfig {
     this.PROXY_MIDDLEWARE = [
       // require('http-proxy-middleware')({ ws: false, target: 'http://localhost:3003' })
       require('http-proxy-middleware')('/api', {
-        target: `${'http://localhost:11324'}`,
+        target: `${'http://localhost:11325'}`,
         changeOrigin: false,
         logLevel: 'debug'
       })
